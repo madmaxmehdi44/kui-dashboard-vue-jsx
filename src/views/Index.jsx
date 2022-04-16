@@ -11,7 +11,7 @@ import mobileDark2 from '@/assets/images/showcase/mobile-dark-2.svg'
 import mobileLight from '@/assets/images/showcase/mobile-light.svg'
 import mobileLight2 from '@/assets/images/showcase/mobile-light-2.svg'
 import Button from '@/components/Button'
-import { warnToast } from '@/toast'
+import { successToast } from '@/toast'
 
 const Navbar = defineComponent({
   setup() {
@@ -43,7 +43,7 @@ const Navbar = defineComponent({
         >
           {/* Logo */}
           <a href="#" class="inline-block rounded-md p-2 bg-white dark:bg-dark-eval-1">
-            <span class="sr-only">Home</span>
+            <span class="sr-only">خانه</span>
             <Logo class="w-10 h-auto md:w-12" />
           </a>
 
@@ -70,13 +70,13 @@ const CTAButtons = defineComponent({
           {({ iconSizeClasses }) => (
             <>
               <EyeIcon aria-hidden="true" class={iconSizeClasses} />
-              <span class="whitespace-nowrap">Live Preview</span>
+              <span class="whitespace-nowrap">نمونه کار ها</span>
             </>
           )}
         </Button>
 
         <Button
-          href="https://github.com/kamona-ui/kui-dashboard-vue-jsx"
+          href="https://arput-template-frontend.vercel.app/"
           target="_blank"
           class="w-full justify-center items-center gap-2"
           variant="black"
@@ -84,13 +84,13 @@ const CTAButtons = defineComponent({
           {({ iconSizeClasses }) => (
             <>
               <GithubIcon aria-hidden="true" class={iconSizeClasses} />
-              <span class="whitespace-nowrap">Github</span>
+              <span class="whitespace-nowrap">ویدئو بلاگ آرپوت</span>
             </>
           )}
         </Button>
 
         <Button
-          href="https://www.figma.com/community/file/1019844542917981418"
+          href="https://www.arput.com/contact-us/"
           target="_blank"
           class="w-full justify-center items-center gap-2"
           variant="info"
@@ -98,7 +98,7 @@ const CTAButtons = defineComponent({
           {({ iconSizeClasses }) => (
             <>
               <FigmaIcon aria-hidden="true" class={iconSizeClasses} />
-              <span class="whitespace-nowrap">Figma File</span>
+              <span class="whitespace-nowrap">مشاوره رایگان</span>
             </>
           )}
         </Button>
@@ -124,8 +124,9 @@ export default defineComponent({
         rotateX: 0,
         duration: 2,
         onComplete: () => {
-          warnToast({
-            text: 'This template is not finished yet and still in design phase. We are building it in public.',
+          successToast({
+            title:'آرپوت',
+            text: 'به واقعیت افزوده ی آرپوت خوش آمدید',
           })
         },
       })
@@ -136,11 +137,11 @@ export default defineComponent({
         <Navbar />
 
         <main>
-          <h1 class="sr-only">K UI Dashboard Template</h1>
+          <h1 class="sr-only">آرپوت</h1>
 
           {/* Introsection */}
           <section class="relative min-h-screen overflow-hidden bg-gradient-to-tr from-purple-500 via-blue-300 to-indigo-400 dark:from-purple-900 dark:via-blue-900 dark:to-indigo-800">
-            <h2 class="sr-only">Showcase</h2>
+            <h2 class="sr-only">کارها</h2>
 
             {/* Background */}
             <div class="absolute inset-x-[-10vw] top-0 bottom-20 md:bottom-0 md:top-24 rounded-[77vw/50vw] rounded-t-none md:rounded-b-none md:rounded-[77vw/50vw] bg-white dark:bg-dark-bg"></div>
