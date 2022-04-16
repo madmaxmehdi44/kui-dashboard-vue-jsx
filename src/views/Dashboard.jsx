@@ -29,7 +29,7 @@ const Header = defineComponent({
           {({ iconSizeClasses }) => (
             <>
               <GithubIcon aria-hidden="true" class={iconSizeClasses} />
-              <span>Star on Github</span>
+              <span>رسانه های اجتماعی</span>
             </>
           )}
         </Button>
